@@ -1,0 +1,15 @@
+C:\Dev\Cofrinho\bin\Debug\net6.0\Cofrinho.exe
+C:\Dev\Cofrinho\bin\Debug\net6.0\Cofrinho.deps.json
+C:\Dev\Cofrinho\bin\Debug\net6.0\Cofrinho.runtimeconfig.json
+C:\Dev\Cofrinho\bin\Debug\net6.0\Cofrinho.dll
+C:\Dev\Cofrinho\bin\Debug\net6.0\Cofrinho.pdb
+C:\Dev\Cofrinho\obj\Debug\net6.0\Cofrinho.csproj.AssemblyReference.cache
+C:\Dev\Cofrinho\obj\Debug\net6.0\Cofrinho.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Cofrinho\obj\Debug\net6.0\Cofrinho.AssemblyInfoInputs.cache
+C:\Dev\Cofrinho\obj\Debug\net6.0\Cofrinho.AssemblyInfo.cs
+C:\Dev\Cofrinho\obj\Debug\net6.0\Cofrinho.csproj.CoreCompileInputs.cache
+C:\Dev\Cofrinho\obj\Debug\net6.0\Cofrinho.dll
+C:\Dev\Cofrinho\obj\Debug\net6.0\refint\Cofrinho.dll
+C:\Dev\Cofrinho\obj\Debug\net6.0\Cofrinho.pdb
+C:\Dev\Cofrinho\obj\Debug\net6.0\Cofrinho.genruntimeconfig.cache
+C:\Dev\Cofrinho\obj\Debug\net6.0\ref\Cofrinho.dll
