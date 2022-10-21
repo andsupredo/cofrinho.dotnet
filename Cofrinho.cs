@@ -12,11 +12,13 @@ namespace Cofrinho
         {
             listaMoedas.Add(moeda);
             Console.WriteLine("Adicionando $" + moeda.valor + " " + moeda.nome + " ao cofrinho.");
+            Thread.Sleep(1000);
         }
 
         public void remover(Moeda moeda)
         {
             listaMoedas.Remove(moeda);
+            Thread.Sleep(1500);
         }
 
         public void listagemMoedas()
@@ -26,6 +28,7 @@ namespace Cofrinho
             foreach (Moeda m in listaMoedas)
             {
                 Console.WriteLine(m);
+                Thread.Sleep(1500);
             }
         }
 
@@ -37,6 +40,7 @@ namespace Cofrinho
                 soma += ((Moeda)m).converter();
             }
             Console.WriteLine("Total convertido em R$: ", soma);
+            Thread.Sleep(1500);
         }
     }
 }

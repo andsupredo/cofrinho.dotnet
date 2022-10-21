@@ -8,6 +8,7 @@ namespace Cofrinho
 
         static void Main(string[] args)
         {
+            Console.Clear();
             var menus = new Menus();
             menus.menuPrincipal();
             

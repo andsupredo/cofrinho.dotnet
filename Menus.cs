@@ -34,6 +34,7 @@ namespace Cofrinho
                     catch (FormatException)
                     {
                         Console.WriteLine("\nDigite apenas números inteiros!");
+                        Thread.Sleep(1000);
                     }
                 }
                 switch (menu)
@@ -45,6 +46,7 @@ namespace Cofrinho
                         break;
 
                     case 1:
+                        Thread.Sleep(1000);
                         selecionaAdd();
                         break;
 
@@ -52,10 +54,12 @@ namespace Cofrinho
                         if (cofrinho.listaMoedas.Count == 0)
                         {
                             Console.WriteLine("\nNão existem moedas para serem removidas!");
+                            Thread.Sleep(1000);
                             break;
                         }
                         else
                         {
+                            Thread.Sleep(1000);
                             selecionaRemovida();
                             break;
                         }
@@ -63,15 +67,18 @@ namespace Cofrinho
                     case 3:
 
                         cofrinho.listagemMoedas();
+                        Thread.Sleep(1500);
                         break;
 
                     case 4:
 
                         cofrinho.totalConvertido();
+                        Thread.Sleep(2200);
                         break;
 
                     default:
                         Console.WriteLine("Opção inválida"); // opção para valor incorreto inserido.
+                        Thread.Sleep(1000);
                         break;
                 }
 
@@ -113,6 +120,7 @@ namespace Cofrinho
                     catch (FormatException)
                     {
                         Console.WriteLine("\nDigite apenas números inteiros!");
+                        Thread.Sleep(1000);
                     }
                 }
                 switch (select)
@@ -120,28 +128,33 @@ namespace Cofrinho
 
                     case 0:
                         Console.WriteLine("Voltando ao menu anterior...");
+                        Thread.Sleep(1000);
                         break; // Encerra o loop e retorna.
 
                     case 1:
                         Console.WriteLine("Selecionado dólar");
+                        Thread.Sleep(1000);
                         var dolar = new Dolar(valorMoeda(), null, 0.0);
                         cofrinho.adicionar(dolar);
                         break;
 
                     case 2:
                         Console.WriteLine("Selecionado euro");
+                        Thread.Sleep(1000);
                         var euro = new Euro(valorMoeda(), null, 0.0);
                         cofrinho.adicionar(euro);
                         break;
 
                     case 3:
                         Console.WriteLine("Selecionado real");
+                        Thread.Sleep(1000);
                         var real = new Real(valorMoeda(), null, 0.0);
                         cofrinho.adicionar(real);
                         break;
 
                     default:
                         Console.WriteLine("Seleção inválida...");
+                        Thread.Sleep(1000);
                         break;
                 }
                 break;
@@ -174,6 +187,7 @@ namespace Cofrinho
                       // caracteres que não sejam números inteiros e quebrar a
                       // aplicação.
                         Console.WriteLine("\nDigite apenas números inteiros!");
+                        Thread.Sleep(1000);
                     }
                 }
 
@@ -182,6 +196,7 @@ namespace Cofrinho
 
                     case 0:
                         Console.WriteLine("Voltando ao menu anterior...");
+                        Thread.Sleep(1000);
                         break; // Encerra o loop e retorna.
 
                     case 1:
@@ -189,6 +204,7 @@ namespace Cofrinho
                         { // bloco try para evitar puxar moedas inexistentes no cofrinho e gerar alguma
                           // excessão que quebre o sistema.
                             Console.WriteLine("\nSelecionado dólar");
+                            Thread.Sleep(1500);
                             var valor = valorMoeda(); // invocação do método que seleciona o valor escolhido de moeda
                                                       // salva em uma variável local.
                             foreach (Moeda m in cofrinho.listaMoedas)
@@ -199,6 +215,8 @@ namespace Cofrinho
                                     if (dolar.valor == valor)
                                     {
                                         cofrinho.listaMoedas.Remove(dolar);// Se o valor for igual, a moeda é removida.
+                                        Console.WriteLine("Moeda encontrada! Removendo...");
+                                        Thread.Sleep(1500);
                                         break; // Encerrando o laço para não remover uma segunda moeda que possua mesmo
                                                // valor.
                                     }
@@ -212,6 +230,7 @@ namespace Cofrinho
                         catch (Exception)
                         {
                             Console.WriteLine("\nOperação não permitida, tente novamente!");
+                            Thread.Sleep(1000);
                             break;
                         }
                         break;
@@ -220,6 +239,7 @@ namespace Cofrinho
                         try
                         {
                             Console.WriteLine("\nSelecionado euro");
+                            Thread.Sleep(1500);
                             var valor = valorMoeda(); // invocação do método que seleciona o valor escolhido de
                                                       // moeda e salva em uma variável local.
                             foreach (Moeda m in cofrinho.listaMoedas)
@@ -231,6 +251,8 @@ namespace Cofrinho
                                     { // Verficiar se o valor do euro iterado é o mesmo do valor
                                       // da variável local de nome valor.
                                         cofrinho.listaMoedas.Remove(euro);// Se o valor for igual, a moeda é removida.
+                                        Console.WriteLine("Moeda encontrada, removendo!");
+                                        Thread.Sleep(1500);
                                         break; // Encerrando o laço para não remover uma segunda moeda que possua mesmo
                                                // valor.
                                     }
@@ -244,6 +266,7 @@ namespace Cofrinho
                         catch (Exception)
                         {
                             Console.WriteLine("\nNão existem moedas desse tipo & valor no cofrinho!");
+                            Thread.Sleep(1000);
                             break;
                         }
                         break;
@@ -253,6 +276,7 @@ namespace Cofrinho
                         try
                         {
                             Console.WriteLine("\nSelecionado real");
+                            Thread.Sleep(1500);
                             var valor = valorMoeda(); // invocação do método que seleciona o valor escolhido de
                                                       // moeda e salva em uma variável local.
                             foreach (Moeda m in cofrinho.listaMoedas)
@@ -264,6 +288,8 @@ namespace Cofrinho
                                     { // Verficiar se o valor do real iterado é o mesmo do valor
                                       // da variável local de nome valor.
                                         cofrinho.listaMoedas.Remove(real);// Se o valor for igual, a moeda é removida.
+                                        Console.WriteLine("Moeda encontrada! Removendo...");
+                                        Thread.Sleep(1500);
                                         break; // Encerrando o laço para não remover uma segunda moeda que possua mesmo
                                                // valor.
                                     }
@@ -277,12 +303,14 @@ namespace Cofrinho
                         catch (Exception)
                         {
                             Console.WriteLine("\nNão existem moedas desse tipo & valor no cofrinho!");
+                            Thread.Sleep(1000);
                             break;
                         }
                         break;
 
                     default:
                         Console.WriteLine("\nEntrada inválida");
+                        Thread.Sleep(1000);
                         break;
                 }
                 break;
@@ -312,6 +340,7 @@ namespace Cofrinho
                     catch (FormatException)
                     {
                         Console.WriteLine("\nDigite apenas números inteiros!");
+                        Thread.Sleep(1500);
                     }
                 }
                 switch (valor)
@@ -319,22 +348,27 @@ namespace Cofrinho
 
                     case 1:
                         Console.WriteLine("\nrealziando transação...");
+                        Thread.Sleep(1500);
                         return 0.10;
 
                     case 2:
                         Console.WriteLine("\nrealziando transação...");
+                        Thread.Sleep(1500);
                         return 0.25;
 
                     case 3:
                         Console.WriteLine("\nrealziando transação...");
+                        Thread.Sleep(1500);
                         return 0.50;
 
                     case 4:
                         Console.WriteLine("\nrealziando transação...");
+                        Thread.Sleep(1500);
                         return 1;
 
                     default:
                         Console.WriteLine("\nOpção inválida, selecione um valor de moeda existente");
+                        Thread.Sleep(1500);
                         return 0;
                 }
 
